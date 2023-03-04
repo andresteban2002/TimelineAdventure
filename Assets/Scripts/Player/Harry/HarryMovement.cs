@@ -40,7 +40,9 @@ public class HarryMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movimiento Horizontal
         _horizontal = Input.GetAxisRaw("Horizontal");
+        
         Debug.DrawRay(transform.position, Vector3.down * 5f, Color.red);
         if (Physics2D.Raycast(transform.position, Vector3.down, 5f))
         {
@@ -68,6 +70,7 @@ public class HarryMovement : MonoBehaviour
         {
             returnBoomerang();
         }
+        
 
     }
 
@@ -83,11 +86,13 @@ public class HarryMovement : MonoBehaviour
             _rigidbody2D.velocity = new Vector2(_horizontal*Speed, _rigidbody2D.velocity.y);
             if (_horizontal > 0)
             {
+                isThrows = false;
                 transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                 changeAnimationState(HARRY_WALK);
             }
             else if (_horizontal < 0)
             {
+                isThrows = false;
                 transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                 changeAnimationState(HARRY_WALK);
             }
@@ -100,6 +105,10 @@ public class HarryMovement : MonoBehaviour
             }
             else if(!hasBoomerang)
             {
+                if (boomerang.GetComponent<Transform>().position.x>transform.position.x)
+                    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                else
+                    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                 changeAnimationState(HARRY_WAIT_THROWS);
             }
         }
