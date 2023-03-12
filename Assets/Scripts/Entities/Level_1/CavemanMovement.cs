@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
@@ -12,28 +13,27 @@ public class CavemanMovement : MonoBehaviour
     private const string CAVEMAN_WALK = "Caveman_Walk";
     private Animator _animator;
     private string currentStep;
+
+    private string direction = "right";
     // Start is called before the first frame update
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        //_animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
+        changeAnimationState(CAVEMAN_WALK);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player)
+        if (direction == "right")
         {
-            if (player.transform.position.x > transform.position.x)
-            {
-                _spriteRenderer.flipX = false;
-            }
-            else
-            {
-                _spriteRenderer.flipX = true;
-            }
+            transform.Translate(Vector3.right * Time.deltaTime * 4.0f);
         }
-        //changeAnimationState(CAVEMAN_WALK);
+        else if (direction == "left")
+        {
+            transform.Translate(Vector3.left * Time.deltaTime * 4.0f);
+        }
     }
     
     public void changeAnimationState(string newState)
@@ -47,7 +47,20 @@ public class CavemanMovement : MonoBehaviour
     {
     }
 
-
-
-
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("enemyLimit"))
+        {
+            if (direction == "right")
+            {
+                _spriteRenderer.flipX = true;
+                direction = "left";
+            }
+            else if (direction == "left")
+            {
+                _spriteRenderer.flipX = false;
+                direction = "right";
+            }
+        }
+    }
 }
