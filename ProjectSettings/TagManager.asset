@@ -6,11 +6,7 @@ TagManager:
   tags:
   - Tramps
   - Boomerang
-<<<<<<< HEAD
-  - stone
-=======
   - enemyLimit
->>>>>>> 95c2ffbfe7542850c7c29cc7fc551c0c0a55b91c
   layers:
   - Default
   - TransparentFX
