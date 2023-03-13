@@ -3,10 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Tramps
   - Boomerang
   - enemyLimit
+=======
+  tags: []
+>>>>>>> a2a481a7ff062098a12a8dfc63328d35bf1fe014
   layers:
   - Default
   - TransparentFX
