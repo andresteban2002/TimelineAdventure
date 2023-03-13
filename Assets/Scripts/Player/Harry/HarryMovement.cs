@@ -17,6 +17,7 @@ public class HarryMovement : MonoBehaviour
     public GameObject BoomerangPrefab;
     private bool hasBoomerang = true;
     private float boomerangTime;
+    private bool isThrows = false;
     private GameObject boomerang;
     private Transform _transform;
     
@@ -25,6 +26,8 @@ public class HarryMovement : MonoBehaviour
     private string currentStep;
     private const string HARRY_QUIET = "Harry_Quiet";
     private const string HARRY_WALK = "Harry_Walk";
+    private const string HARRY_THROWS = "Harry_Throws";
+    private const string HARRY_WAIT_THROWS = "Harry_Wait_Throws";
     /*[SerializeField] private Vector2 reboundVelocity;*/
 
     void Start()
@@ -37,7 +40,9 @@ public class HarryMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movimiento Horizontal
         _horizontal = Input.GetAxisRaw("Horizontal");
+        
         Debug.DrawRay(transform.position, Vector3.down * 5f, Color.red);
         if (Physics2D.Raycast(transform.position, Vector3.down, 5f))
         {
@@ -54,13 +59,18 @@ public class HarryMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Shoot();
+            if (hasBoomerang)
+            {
+                isThrows = true;
+                changeAnimationState(HARRY_THROWS);
+            }
         }
 
-        if (Time.time > boomerangTime + 1f)
+        if (!hasBoomerang&&Time.time > boomerangTime + 1f)
         {
             returnBoomerang();
         }
+        
 
     }
 
@@ -76,18 +86,31 @@ public class HarryMovement : MonoBehaviour
             _rigidbody2D.velocity = new Vector2(_horizontal*Speed, _rigidbody2D.velocity.y);
             if (_horizontal > 0)
             {
+                isThrows = false;
                 transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                 changeAnimationState(HARRY_WALK);
             }
             else if (_horizontal < 0)
             {
+                isThrows = false;
                 transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                 changeAnimationState(HARRY_WALK);
             }
         }
         else
         {
-            changeAnimationState(HARRY_QUIET);
+            if (!isThrows && hasBoomerang)
+            {
+                changeAnimationState(HARRY_QUIET);
+            }
+            else if(!hasBoomerang)
+            {
+                if (boomerang.GetComponent<Transform>().position.x>transform.position.x)
+                    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                else
+                    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                changeAnimationState(HARRY_WAIT_THROWS);
+            }
         }
     }
 
@@ -110,18 +133,20 @@ public class HarryMovement : MonoBehaviour
 
     private void Shoot()
     {
-        if (hasBoomerang)
+        boomerangTime = Time.time;
+        hasBoomerang = false;
+        Vector3 direction;
+        if (transform.localScale.x == 1.0f)
+            direction = Vector3.right;
+        else
         {
-            boomerangTime = Time.time;
-            hasBoomerang = false;
-            Vector3 direction;
-            if (transform.localScale.x == 1.0f) direction = Vector3.right;
-            else direction = Vector2.left;
-
-            boomerang =
-                Instantiate(BoomerangPrefab, transform.position + direction * 0.1f, Quaternion.identity);
-            boomerang.GetComponent<BoomerangScript>().SetDirection(direction);
+            direction = Vector2.left;
         }
+        
+        boomerang =
+            Instantiate(BoomerangPrefab, transform.position + direction * 0.1f, Quaternion.identity);
+        boomerang.GetComponent<BoomerangScript>().SetDirection(direction);
+
     }
 
     private void returnBoomerang()
@@ -138,6 +163,7 @@ public class HarryMovement : MonoBehaviour
             
             
             boomerang.GetComponent<BoomerangScript>().SetDirection(direction);
+            isThrows = false;
         }
     }
 
@@ -147,8 +173,10 @@ public class HarryMovement : MonoBehaviour
         {
             if (collision.gameObject.tag == "Boomerang")
             {
+                GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
                 Destroy(collision.gameObject);
                 hasBoomerang = true;
+                GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
         }
     }
