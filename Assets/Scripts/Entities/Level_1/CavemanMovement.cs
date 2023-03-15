@@ -92,6 +92,7 @@ public class CavemanMovement : MonoBehaviour
 
     private void stopAttack()
     {
+        
         changeAnimationState(CAVEMAN_WALK);
     }
 }
