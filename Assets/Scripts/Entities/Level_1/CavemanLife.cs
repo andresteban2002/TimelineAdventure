@@ -1,7 +1,26 @@
-namespace Entities.Level_1
+using UnityEngine;
+
+public class CavemanLife : MonoBehaviour
 {
-    public class CavemanLife
+    [SerializeField] int life;
+    public bool isDeath;
+
+    private void Update()
     {
-        
+        if (isDeath)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void getNaturalDamage(int damage)
+    {
+        life -= damage;
+        if (life <= 0)
+        {
+            isDeath = true;
+        }
+
     }
 }
+
