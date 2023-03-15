@@ -13,6 +13,8 @@ public class CavemanMovement : MonoBehaviour
     private const string CAVEMAN_WALK = "Caveman_Walk";
     private const string CAVEMAN_ATTACK = "cavemanAttack";
     private Animator _animator;
+    Animator _animatorHarry;
+    private const string HARRY_DAMAGE = "Harry_Damage";
     private string currentStep;
 
     private string direction = "right";
@@ -84,6 +86,10 @@ public class CavemanMovement : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             changeAnimationState(CAVEMAN_ATTACK);
+            _animatorHarry = other.GetComponent<Animator>();
+            _animatorHarry.Play(HARRY_DAMAGE);
+            other.GetComponent<HarryMovement>().canMove = false;
+            other.GetComponent<PlayerLife>().getNaturalDamage(15);
             Debug.Log("hola");
             //isAttack = true;
         }
@@ -92,7 +98,6 @@ public class CavemanMovement : MonoBehaviour
 
     private void stopAttack()
     {
-        
         changeAnimationState(CAVEMAN_WALK);
     }
 }
