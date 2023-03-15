@@ -11,11 +11,15 @@ public class CavemanMovement : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private const string CAVEMAN_WALK = "Caveman_Walk";
+    private const string CAVEMAN_ATTACK = "cavemanAttack";
     private Animator _animator;
     private string currentStep;
 
     private string direction = "right";
     // Start is called before the first frame update
+
+    public bool isAttack = false;
+    private float attackTime = 1;
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -34,6 +38,20 @@ public class CavemanMovement : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * 4.0f);
         }
+
+        /*if (!isAttack)
+        { 
+            changeAnimationState(CAVEMAN_WALK);
+        }
+        else
+        {
+            attackTime -= Time.deltaTime;
+            if (attackTime < 0.6)
+            {
+                _animator.StopPlayback();
+                isAttack = false;
+            }
+        }*/
     }
     
     public void changeAnimationState(string newState)
@@ -62,5 +80,18 @@ public class CavemanMovement : MonoBehaviour
                 direction = "right";
             }
         }
+
+        if (other.CompareTag("Player"))
+        {
+            changeAnimationState(CAVEMAN_ATTACK);
+            Debug.Log("hola");
+            //isAttack = true;
+        }
+        
+    }
+
+    private void stopAttack()
+    {
+        changeAnimationState(CAVEMAN_WALK);
     }
 }
