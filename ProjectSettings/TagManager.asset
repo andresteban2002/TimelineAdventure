@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tramps
   - Boomerang
+  - enemyLimit
+  - enemy
   layers:
   - Default
   - TransparentFX
