@@ -19,7 +19,6 @@ public class CavemanMovement : MonoBehaviour
 
     private string direction = "right";
     // Start is called before the first frame update
-    private float attackTime = 1;
     void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();

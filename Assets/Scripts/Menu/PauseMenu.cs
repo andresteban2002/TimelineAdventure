@@ -37,6 +37,8 @@ public class PauseMenu : MonoBehaviour
     public void Close()
     {
         Debug.Log("Cerrando Juego");
+        pauseButton.SetActive(true);
+        pauseMenu.SetActive(false);
         Application.Quit();
     }
 
