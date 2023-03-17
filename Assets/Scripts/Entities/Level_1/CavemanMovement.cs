@@ -19,8 +19,6 @@ public class CavemanMovement : MonoBehaviour
 
     private string direction = "right";
     // Start is called before the first frame update
-
-    public bool isAttack = false;
     private float attackTime = 1;
     void Start()
     {
@@ -88,9 +86,7 @@ public class CavemanMovement : MonoBehaviour
             changeAnimationState(CAVEMAN_ATTACK);
             _animatorHarry = other.GetComponent<Animator>();
             _animatorHarry.Play(HARRY_DAMAGE);
-            other.GetComponent<HarryMovement>().canMove = false;
             other.GetComponent<PlayerLife>().getNaturalDamage(15);
-            Debug.Log("hola");
             //isAttack = true;
         }
         
