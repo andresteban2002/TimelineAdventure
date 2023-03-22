@@ -88,10 +88,10 @@ public class CavemanMovement : MonoBehaviour
             changeAnimationState(CAVEMAN_ATTACK);
             _animatorHarry = other.GetComponent<Animator>();
             _animatorHarry.Play(HARRY_DAMAGE);
-            other.GetComponent<HarryMovement>().canMove = false;
+            //other.GetComponent<HarryMovement>().canMove = false;
             other.GetComponent<PlayerLife>().getNaturalDamage(15);
             Debug.Log("hola");
-            //isAttack = true;
+            //isAttack = true; Andrea
         }
         
     }
