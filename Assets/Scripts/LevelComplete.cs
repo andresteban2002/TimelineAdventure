@@ -16,7 +16,6 @@ public class LevelComplete : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Completado");
         if (other.CompareTag("Player"))
         {
             complete();

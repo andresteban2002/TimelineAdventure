@@ -75,7 +75,7 @@ public class PauseMenu : MonoBehaviour
             Debug.Log("Cerrando Juego");
             pauseButton.SetActive(true);
             pauseMenu.SetActive(false);
-            Application.Quit();
+            SceneManager.LoadScene("PrincipalMenu");
         }
     }
 
