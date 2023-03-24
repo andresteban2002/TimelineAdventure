@@ -32,6 +32,7 @@ public class HarryMovement : MonoBehaviour
 
     void Start()
     {
+        canMove = true;
         _transform = GetComponent<Transform>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
