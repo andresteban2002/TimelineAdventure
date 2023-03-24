@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject player;
+
     private bool isPaused;
     // Start is called before the first frame update
 
@@ -55,7 +56,7 @@ public class PauseMenu : MonoBehaviour
             pauseButton.SetActive(true);
             pauseMenu.SetActive(false);
             player.GetComponent<HarryMovement>().canMove = true;
-            gameObject.GetComponent<GetNicknameField>().FieldNickname();
+            gameObject.GetComponent<GetNicknameField>().TextNickname();
         }
     }
     
@@ -81,5 +82,6 @@ public class PauseMenu : MonoBehaviour
             SceneManager.LoadScene("PrincipalMenu");
         }
     }
+    
 
 }

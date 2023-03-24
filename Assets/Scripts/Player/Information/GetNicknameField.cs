@@ -7,8 +7,9 @@ public class GetNicknameField : MonoBehaviour
 {
     [SerializeField] private Text nickname;
     
-    public void FieldNickname()
+    public void TextNickname()
     {
         nickname.text = NicknameScript.instance.nameFileData;
     }
+
 }
