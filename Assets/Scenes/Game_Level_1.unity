@@ -1931,6 +1931,7 @@ GameObject:
   - component: {fileID: 637491004}
   - component: {fileID: 637491003}
   - component: {fileID: 637491007}
+  - component: {fileID: 637491008}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2041,6 +2042,18 @@ MonoBehaviour:
   pauseButton: {fileID: 249633910}
   pauseMenu: {fileID: 393238665}
   player: {fileID: 2103051211}
+--- !u!114 &637491008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637491002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a447274c52e9e4985839cc5a519f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   nickname: {fileID: 1990665524}
 --- !u!4 &647293708 stripped
 Transform:

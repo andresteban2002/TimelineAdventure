@@ -11,7 +11,7 @@ public class NicknameValidation : MonoBehaviour
     NicknameData data;
     private void Start()
     {
-        Acceptbutton.interactable = true;
+        Acceptbutton.interactable = false;
     }
 
     public void isRequired()
