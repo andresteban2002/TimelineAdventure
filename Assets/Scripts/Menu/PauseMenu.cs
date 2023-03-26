@@ -3,18 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject player;
+
     private bool isPaused;
     // Start is called before the first frame update
 
     void Start()
     {
         isPaused = false;
+        Resume();
     }
 
     void Update()
@@ -53,6 +56,7 @@ public class PauseMenu : MonoBehaviour
             pauseButton.SetActive(true);
             pauseMenu.SetActive(false);
             player.GetComponent<HarryMovement>().canMove = true;
+            gameObject.GetComponent<GetNicknameField>().TextNickname();
         }
     }
     
@@ -72,11 +76,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (player)
         {
-            Debug.Log("Cerrando Juego");
             pauseButton.SetActive(true);
             pauseMenu.SetActive(false);
-            Application.Quit();
+            player.GetComponent<HarryMovement>().canMove = true;
+            SceneManager.LoadScene("PrincipalMenu");
         }
     }
+    
 
 }

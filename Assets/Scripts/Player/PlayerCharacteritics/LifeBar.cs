@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class LifeBar : MonoBehaviour
 {
-
     private Slider slider;
+    NicknameData data;
     // Start is called before the first frame update
     void Start()
     {
