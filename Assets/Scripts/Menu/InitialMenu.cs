@@ -34,6 +34,7 @@ public class InitialMenu : MonoBehaviour
         matchData.levelAct = 1;
         matchData.posX = -5.1f;
         matchData.posY = 7.7f;
+        matchData.life = 100;
         matchData.collectedItems = new bool[20] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true };
         data = gameObject.GetComponent<NicknameScript>().LoadData();
         data.matches.Add(matchData);
