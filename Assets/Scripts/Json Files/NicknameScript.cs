@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 using Object = UnityEngine.Object;
 
 public class NicknameScript : MonoBehaviour
@@ -10,7 +12,8 @@ public class NicknameScript : MonoBehaviour
     public static NicknameScript instance;
     public const string pathData = "Data/Test";
     public string nameFileData;
-    NicknameData data;
+    public NicknameData data;
+    public int actMatch;
 
     public NicknameData LoadData()
     {
@@ -39,5 +42,15 @@ public class NicknameScript : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    public string GetPathData()
+    {
+        return pathData;
+    }
+    
+    public string GetFileName()
+    {
+        return nameFileData;
     }
 }

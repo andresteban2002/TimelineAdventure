@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LifeBar : MonoBehaviour
 {
+    public static LifeBar instance;
     private Slider slider;
     NicknameData data;
     // Start is called before the first frame update
@@ -28,5 +29,10 @@ public class LifeBar : MonoBehaviour
     {
         ChangeMaxLife(cantidadVida);
         ChangeCurrentLife(cantidadVida);
+    }
+    
+    private void Awake()
+    {
+        instance = this;
     }
 }

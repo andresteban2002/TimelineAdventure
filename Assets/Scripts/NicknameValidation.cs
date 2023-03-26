@@ -8,6 +8,7 @@ public class NicknameValidation : MonoBehaviour
 {
     public InputField nicknameField;
     public Button Acceptbutton;
+    [SerializeField] private GameObject newMatchButton;
     NicknameData data;
     private void Start()
     {
@@ -37,6 +38,15 @@ public class NicknameValidation : MonoBehaviour
             if (dataOld.nickname != data.nickname)
             {
                 gameObject.GetComponent<NicknameScript>().SaveData(data);
+            }
+
+            if (dataOld.matches.Count >= 5)
+            {
+                newMatchButton.SetActive(false);
+            }
+            else
+            {
+                newMatchButton.SetActive(true);
             }
         }
         else
