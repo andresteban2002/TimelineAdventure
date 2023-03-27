@@ -250,6 +250,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5591143559120184104, guid: 9c3051ee43d6c8a45923572fd369fb27, type: 3}
   m_PrefabInstance: {fileID: 20934206}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &28627133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683131237558941437, guid: 1c1fe2e9d62a7e24f90b924da1101869, type: 3}
+  m_PrefabInstance: {fileID: 604746777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &30710155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4350866149311378891, guid: ef9c66ca071526d4cbe00ff0b3a4f5a7, type: 3}
@@ -1261,6 +1266,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b47b4babf2feb4482c19273053d15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stonesItem:
+  - {fileID: 1393420912}
+  - {fileID: 28627133}
+  - {fileID: 747924486}
+  - {fileID: 514571800}
+  - {fileID: 1113723194}
+  - {fileID: 1667878029}
 --- !u!1001 &418850742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1605,6 +1617,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1847067011329093112, guid: a17a71696c67f76438ee7fc1ef59dc85, type: 3}
   m_PrefabInstance: {fileID: 2089440900297846810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &514571800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683131237558941437, guid: 1c1fe2e9d62a7e24f90b924da1101869, type: 3}
+  m_PrefabInstance: {fileID: 825932729}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
@@ -2201,6 +2218,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4350866149311378891, guid: ef9c66ca071526d4cbe00ff0b3a4f5a7, type: 3}
   m_PrefabInstance: {fileID: 4350866147594250915}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &747924486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683131237558941437, guid: 1c1fe2e9d62a7e24f90b924da1101869, type: 3}
+  m_PrefabInstance: {fileID: 2099204307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &766018669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2754,6 +2776,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 503052d6c5651b44c8847a986b199bda, type: 3}
+--- !u!1 &1113723194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683131237558941437, guid: 1c1fe2e9d62a7e24f90b924da1101869, type: 3}
+  m_PrefabInstance: {fileID: 1305439423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1136826700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3997,6 +4024,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388224199}
   m_CullTransparentMesh: 1
+--- !u!1 &1393420912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683131237558941437, guid: 1c1fe2e9d62a7e24f90b924da1101869, type: 3}
+  m_PrefabInstance: {fileID: 1280043621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1413212538
 GameObject:
   m_ObjectHideFlags: 0
@@ -48355,6 +48387,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1718064328208384982, guid: 63de92de1c6a2ca4a80145c88d413373, type: 3}
   m_PrefabInstance: {fileID: 1799936897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1667878029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683131237558941437, guid: 1c1fe2e9d62a7e24f90b924da1101869, type: 3}
+  m_PrefabInstance: {fileID: 666881631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1673682292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49216,12 +49253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stonesText: {fileID: 1243494777}
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
-  posXTxt: {fileID: 0}
-  posYTxt: {fileID: 0}
 --- !u!114 &2142523084 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4137398481712135377, guid: 723f20204cb5eaa4c896653535b68685, type: 3}

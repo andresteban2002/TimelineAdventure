@@ -7,11 +7,9 @@ using TMPro;
 
 public class ItemCollector : MonoBehaviour
 {
-    private int stones = 0;
+    private int stones;
     [SerializeField] private Text stonesText;
-    [SerializeField] float minX, maxX, minY, maxY;
-    [SerializeField] GameObject posXTxt, posYTxt;
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("stone"))
@@ -19,6 +17,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             stones++;
             stonesText.text = stones.ToString();
+            changeStateItem(collision.gameObject);
         }
     }
 
@@ -33,4 +32,18 @@ public class ItemCollector : MonoBehaviour
     public void SetPosition(Vector2 pos){
         transform.position = pos;
     }
+
+    public void changeStateItem(GameObject stone)
+    {
+        Debug.Log(NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].collectedItems.Length+" - "+Array.IndexOf(saveSystem.instance.stonesItem, stone));
+        NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].collectedItems[Array.IndexOf(saveSystem.instance.stonesItem, stone)] = false;
+        Debug.Log(NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].collectedItems.Length+" - "+Array.IndexOf(saveSystem.instance.stonesItem, stone));
+    }
+    
+    public void SetStones(int cant)
+    {
+        stones = cant;
+        stonesText.text = stones.ToString();
+    }
+    
 }
