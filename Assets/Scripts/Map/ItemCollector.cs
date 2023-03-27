@@ -9,7 +9,6 @@ public class ItemCollector : MonoBehaviour
 {
     private int stones;
     [SerializeField] private Text stonesText;
-    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("stone"))
@@ -45,5 +44,4 @@ public class ItemCollector : MonoBehaviour
         stones = cant;
         stonesText.text = stones.ToString();
     }
-    
 }
