@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    [SerializeField] int life;
+    public static PlayerLife instance;
+    public int life;
     [SerializeField] int maxLife;
     [SerializeField] private LifeBar lifebar;
     private HarryMovement movementPlayer;
@@ -16,11 +17,12 @@ public class PlayerLife : MonoBehaviour
     //[SerializeField] private float timeLostControl;
     void Start()
     {
-        life = maxLife;
         movementPlayer = GetComponent<HarryMovement>();
         animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        lifebar.StartLifeBar(life);
+        lifebar.StartLifeBar(100);
+        life = NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].life;
+        lifebar.ChangeCurrentLife(life);
     }
 
     private void Update()
@@ -75,4 +77,10 @@ public class PlayerLife : MonoBehaviour
         yield return new WaitForSeconds(timeLostControl);
         movementPlayer.canMove = true;
     }*/
+
+    
+    private void Awake()
+    {
+        instance = this;
+    }
 }
