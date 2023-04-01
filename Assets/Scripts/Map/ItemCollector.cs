@@ -9,6 +9,7 @@ public class ItemCollector : MonoBehaviour
 {
     private int stones;
     [SerializeField] private Text stonesText;
+    GameObject playerH;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("stone"))
@@ -16,7 +17,12 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             stones++;
             stonesText.text = stones.ToString();
-            changeStateItem(collision.gameObject);
+            if (stones == 20)
+            {
+                playerH = GameObject.FindGameObjectWithTag("Player");
+                playerH.transform.position = new Vector3(844,5,1);
+            }
+            changeStateItem(collision.gameObject);             
         }
     }
 
