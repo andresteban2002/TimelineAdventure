@@ -12,6 +12,7 @@ public class InitialMenu : MonoBehaviour
     public bool isnew = true;
     private NicknameData data;
     private MatchData matchData;
+    private SettingsData settingsData;
     [SerializeField] private Button[] matches;
 
     private string[] scenes;

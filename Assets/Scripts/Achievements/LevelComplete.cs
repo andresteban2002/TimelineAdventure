@@ -30,7 +30,7 @@ public class LevelComplete : MonoBehaviour
 
     public void Resume()
     {
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         level.SetActive(false);
     }
 }
