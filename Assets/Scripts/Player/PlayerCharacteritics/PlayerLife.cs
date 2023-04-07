@@ -6,17 +6,24 @@ public class PlayerLife : MonoBehaviour
     public int life;
     [SerializeField] int maxLife;
     [SerializeField] private LifeBar lifebar;
+    [SerializeField] private GameObject gameover;
     private HarryMovement movementPlayer;
     private Rigidbody2D _rigidbody2D;
     public bool isDeath;
     private float deathEnd = 0;
+    public float nextDamageTime;
+    private SettingsData settingsData;
+    private LogicalBright _brightController;
+    private LogicalVolume _volumeController;
     
     //Animaciones
     Animator animator;
     private const string HARRY_DEATH = "Harry_Death";
+    private const string HARRY_DAMAGE = "Harry_Damage";
     //[SerializeField] private float timeLostControl;
     void Start()
     {
+        gameover.SetActive(false);
         movementPlayer = GetComponent<HarryMovement>();
         animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -39,8 +46,14 @@ public class PlayerLife : MonoBehaviour
             deathEnd += Time.deltaTime;
             if (deathEnd >= 2)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
+        }
+        nextDamageTime -= Time.deltaTime;
+        if (nextDamageTime < 0.6 && !isDeath)
+        {
+            GetComponent<HarryMovement>().canMove = true;
+            animator.StopPlayback();
         }
     }
 
@@ -48,14 +61,13 @@ public class PlayerLife : MonoBehaviour
     {
         life -= damage;
         lifebar.ChangeCurrentLife(life);
+        animator.Play(HARRY_DAMAGE);
+        GetComponent<HarryMovement>().canMove = false;
         if (life <= 0)
         {
             isDeath = true;
         }
         
-
-        /*StartCoroutine(lostControl());
-        movementPlayer.rebound(position);*/
     }
 
     public void health(int healthy)
@@ -70,17 +82,16 @@ public class PlayerLife : MonoBehaviour
         }
 
     }
-
-    /*public IEnumerator lostControl()
-    {
-        movementPlayer.canMove = false;
-        yield return new WaitForSeconds(timeLostControl);
-        movementPlayer.canMove = true;
-    }*/
-
     
     private void Awake()
     {
+        _brightController = FindObjectOfType<LogicalBright>();
+        _volumeController = FindObjectOfType<LogicalVolume>();
         instance = this;
+    }
+
+    private void showMenuGameOver()
+    {
+        gameover.SetActive(true);
     }
 }

@@ -9,7 +9,6 @@ public class SaveLoadFileScript : MonoBehaviour
 {
     public static void SaveData<T>(T data, string path, string filename)
     {
-        Debug.Log(Application.dataPath);
         string fullPath = Application.dataPath + "/" + path + "/";
         bool chechFolderExist = Directory.Exists(fullPath);
         if (!chechFolderExist)
@@ -18,7 +17,6 @@ public class SaveLoadFileScript : MonoBehaviour
         }
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(fullPath + filename + ".json", json);
-        Debug.Log("Save data on :"+fullPath);
     }
 
     public static T LoadData<T>(string path, string filename)
@@ -31,7 +29,6 @@ public class SaveLoadFileScript : MonoBehaviour
             return obj;
         } else
         {
-            Debug.Log("not file found on load data");
             return default;
         }
 

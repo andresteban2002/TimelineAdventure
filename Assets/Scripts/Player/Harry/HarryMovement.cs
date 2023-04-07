@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 public class HarryMovement : MonoBehaviour
@@ -20,6 +21,7 @@ public class HarryMovement : MonoBehaviour
     private bool isThrows = false;
     private GameObject boomerang;
     private Transform _transform;
+    private float nextDamageTime;
     
     //Animaciones
     private Animator _animator;
@@ -28,6 +30,10 @@ public class HarryMovement : MonoBehaviour
     private const string HARRY_WALK = "Harry_Walk";
     private const string HARRY_THROWS = "Harry_Throws";
     private const string HARRY_WAIT_THROWS = "Harry_Wait_Throws";
+    
+    //Escena Final
+    [SerializeField] private GameObject dialog;
+    
     /*[SerializeField] private Vector2 reboundVelocity;*/
 
     void Start()
@@ -44,7 +50,6 @@ public class HarryMovement : MonoBehaviour
         //Movimiento Horizontal
         _horizontal = Input.GetAxisRaw("Horizontal");
         
-        Debug.DrawRay(transform.position, Vector3.down * 5f, Color.red);
         if (Physics2D.Raycast(transform.position, Vector3.down, 5f))
         {
             Grounded = true;
@@ -53,7 +58,7 @@ public class HarryMovement : MonoBehaviour
         {
             Grounded = false;
         }
-        if (Input.GetKeyDown(KeyCode.W) && Grounded  && canMove)
+        if ((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.UpArrow)) && Grounded  && canMove)
         {
             Jump();
         }
@@ -71,8 +76,6 @@ public class HarryMovement : MonoBehaviour
         {
             returnBoomerang();
         }
-        
-
     }
 
     private void Jump()
@@ -179,6 +182,19 @@ public class HarryMovement : MonoBehaviour
                 hasBoomerang = true;
                 GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
+        }
+
+        if (collision.gameObject.tag == "guard")
+        {
+            dialog.SetActive(true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "guard")
+        {
+            dialog.SetActive(false);
         }
     }
 }

@@ -30,11 +30,5 @@ public class BoomerangScript : MonoBehaviour
         Direction = direction;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("enemy"))
-        {
-            other.GetComponent<CavemanLife>().getNaturalDamage(15);
-        }
-    }
+    
 }
