@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class CavemanLife : MonoBehaviour
 {
+    private const string CAVEMAN_DAMAGE = "Caveman_Damage";
     private const string CAVEMAN_DEATH = "Caveman_Death";
+    private const string CAVEMAN_WALK = "Caveman_Walk";
     private Animator _animator;
     [SerializeField] int life;
     public bool isDeath;
@@ -19,6 +21,7 @@ public class CavemanLife : MonoBehaviour
     public void getNaturalDamage(int damage)
     {
         life -= damage;
+        _animator.Play(CAVEMAN_DAMAGE);
         if (life <= 0)
         {
             isDeath = true;
@@ -35,6 +38,22 @@ public class CavemanLife : MonoBehaviour
         if (isDeath)
         {
             Destroy(gameObject);
+        }
+    }
+    
+    public void StopDamage()
+    {
+        _animator.Play(CAVEMAN_WALK);
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!isDeath)
+        {
+            if (other.CompareTag("Boomerang"))
+            {
+                getNaturalDamage(15);
+            }
         }
     }
 }

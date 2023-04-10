@@ -37,20 +37,6 @@ public class CavemanMovement : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * 4.0f);
         }
-
-        /*if (!isAttack)
-        { 
-            changeAnimationState(CAVEMAN_WALK);
-        }
-        else
-        {
-            attackTime -= Time.deltaTime;
-            if (attackTime < 0.6)
-            {
-                _animator.StopPlayback();
-                isAttack = false;
-            }
-        }*/
     }
     
     public void changeAnimationState(string newState)
@@ -58,10 +44,6 @@ public class CavemanMovement : MonoBehaviour
         if(currentStep==newState) return;
         _animator.Play(newState);
         currentStep = newState;
-    }
-
-    private void FixedUpdate()
-    {
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -80,15 +62,17 @@ public class CavemanMovement : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !GetComponent<CavemanLife>().isDeath)
         {
             changeAnimationState(CAVEMAN_ATTACK);
-            _animatorHarry = other.GetComponent<Animator>();
-            _animatorHarry.Play(HARRY_DAMAGE);
-            other.GetComponent<PlayerLife>().getNaturalDamage(15);
-            //isAttack = true;
         }
-        
+    }
+
+    private void startAttack()
+    {
+        player.GetComponent<PlayerLife>().nextDamageTime = 1;
+        player.GetComponent<PlayerLife>().getNaturalDamage(15);
+        stopAttack();
     }
 
     private void stopAttack()

@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class GetNicknameField : MonoBehaviour
 {
-    [SerializeField] private Text nickname;
+    [SerializeField] private Text[] nickname;
     
     public void TextNickname()
     {
-        nickname.text = NicknameScript.instance.nameFileData;
+        for (int x = 0; x < nickname.Length; x++)
+        {
+            nickname[x].text = NicknameScript.instance.nameFileData;
+        }
     }
 
 }

@@ -8,6 +8,9 @@ TagManager:
   - Boomerang
   - enemyLimit
   - enemy
+  - stone
+  - guard
+  - Curiosity
   layers:
   - Default
   - TransparentFX
