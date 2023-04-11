@@ -8,6 +8,7 @@ using TMPro;
 public class ItemCollector : MonoBehaviour
 {
     private int stones;
+    GameObject playerH;
     [SerializeField] private Text stonesText;
     [SerializeField] private Text totalStonesText;
     [SerializeField] private string totalStones;
