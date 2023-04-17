@@ -8,7 +8,6 @@ using TMPro;
 public class ItemCollector : MonoBehaviour
 {
     private int stones;
-    GameObject playerH;
     [SerializeField] private Text stonesText;
     [SerializeField] private Text totalStonesText;
     [SerializeField] private string totalStones;
@@ -30,11 +29,6 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             stones++;
             stonesText.text = stones.ToString();
-            if (stones == 20)
-            {
-                playerH = GameObject.FindGameObjectWithTag("Player");
-                playerH.transform.position = new Vector3(844,5,1);
-            }
             changeStateItem(collision.gameObject);             
         }
     }

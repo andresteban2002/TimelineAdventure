@@ -8,6 +8,7 @@ public class CavemanLife : MonoBehaviour
     private Animator _animator;
     [SerializeField] int life;
     public bool isDeath;
+    public AudioSource damage;
 
     void Start()
     {
@@ -53,6 +54,7 @@ public class CavemanLife : MonoBehaviour
             if (other.CompareTag("Boomerang"))
             {
                 getNaturalDamage(15);
+                damage.Play();
             }
         }
     }

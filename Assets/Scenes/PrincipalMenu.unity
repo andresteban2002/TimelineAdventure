@@ -560,7 +560,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 131
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2426,6 +2426,9 @@ MonoBehaviour:
   data:
     nickname: 
     matches: []
+    settings:
+      volumeValue: 0
+      brightValue: 0
   actMatch: 0
 --- !u!114 &880109992
 MonoBehaviour:

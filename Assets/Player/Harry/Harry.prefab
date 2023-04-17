@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8762363319306027086}
   - component: {fileID: 5919046550868840089}
   - component: {fileID: 7593974526038732426}
+  - component: {fileID: -7641518667392596034}
   m_Layer: 0
   m_Name: Harry
   m_TagString: Player
@@ -139,10 +140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4fa3d034b71a148b6607426f8be9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pasos: {fileID: 0}
   JumpForce: 2250
   Speed: 15
   canMove: 1
   BoomerangPrefab: {fileID: 6657814194617748879, guid: a4977b0f8d89bba478dc61df551bfaf7, type: 3}
+  dialog: {fileID: 0}
 --- !u!95 &8762363319306027086
 Animator:
   serializedVersion: 5
@@ -194,3 +197,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stonesText: {fileID: 0}
+  totalStonesText: {fileID: 0}
+  totalStones: 
+  guard: {fileID: 0}
+--- !u!114 &-7641518667392596034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023945063394942850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69632f70535c924bbdf0608521ce837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stonesItem:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
