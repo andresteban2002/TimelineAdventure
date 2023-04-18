@@ -12,6 +12,10 @@ public class MartianScript : MonoBehaviour
     public float bottomLimit = 30;
     public float speed = 3f;
 
+    public float shootSpeed;
+    public float timer; 
+    [SerializeField] Bullet bullet;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -32,8 +36,26 @@ public class MartianScript : MonoBehaviour
         }
 
         transform.localScale = scale;
+
+        Attack();
     }
 
+    void Attack()
+    {
+        Quaternion rot=new Quaternion(0,0,-0.9f,0);
+        if (timer > 0) timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            if (bullet != null)
+            {
+                Bullet newBullet = Instantiate(bullet, transform.position, rot);
+                timer = 0;
+            }
+            timer = shootSpeed;
+        }
+    }
+
+   
     private void FixedUpdate() {
         if (target != null) {
             Debug.Log(transform.position);
