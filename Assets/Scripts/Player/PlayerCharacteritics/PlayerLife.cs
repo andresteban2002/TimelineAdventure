@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
@@ -21,6 +22,9 @@ public class PlayerLife : MonoBehaviour
     private const string HARRY_DEATH = "Harry_Death";
     private const string HARRY_DAMAGE = "Harry_Damage";
     //[SerializeField] private float timeLostControl;
+    
+    public AudioSource getFruit;
+    public AudioSource death;
     void Start()
     {
         gameover.SetActive(false);
@@ -65,6 +69,7 @@ public class PlayerLife : MonoBehaviour
         GetComponent<HarryMovement>().canMove = false;
         if (life <= 0)
         {
+            death.Play();
             isDeath = true;
         }
         
@@ -78,9 +83,9 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
-            life += maxLife;
+            life += healthy;
         }
-
+        lifebar.ChangeCurrentLife(life);
     }
     
     private void Awake()
@@ -93,5 +98,15 @@ public class PlayerLife : MonoBehaviour
     private void showMenuGameOver()
     {
         gameover.SetActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "fruit")
+        {
+            health(15);
+            getFruit.Play();
+            Destroy(col.gameObject);
+        }
     }
 }

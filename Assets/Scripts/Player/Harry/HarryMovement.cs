@@ -206,4 +206,6 @@ public class HarryMovement : MonoBehaviour
             dialog.SetActive(false);
         }
     }
+
+    
 }
