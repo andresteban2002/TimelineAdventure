@@ -13,7 +13,6 @@ public class PlayerLife : MonoBehaviour
     public bool isDeath;
     private float deathEnd = 0;
     public float nextDamageTime;
-    private SettingsData settingsData;
     private LogicalBright _brightController;
     private LogicalVolume _volumeController;
     

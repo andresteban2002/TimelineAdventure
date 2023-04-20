@@ -9,7 +9,7 @@ public class NicknameData
 {
     public string nickname;
     public List<MatchData> matches;
-    public SettingsData settings;
+    public List<AcchievementsData> acchievements;
 }
 [System.Serializable]
 public class MatchData
@@ -23,8 +23,8 @@ public class MatchData
     public bool[] collectedItems;
 }
 [System.Serializable]
-public class SettingsData
+public class AcchievementsData
 {
-    public float volumeValue;
-    public float brightValue;
+    public int level;
+    public bool state;
 }

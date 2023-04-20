@@ -10126,7 +10126,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 637491009}
         m_TargetAssemblyTypeName: saveSystem, Assembly-CSharp
         m_MethodName: SaveGame
         m_Mode: 1
@@ -130448,6 +130448,10 @@ PrefabInstance:
       propertyPath: level
       value: 
       objectReference: {fileID: 66891990}
+    - target: {fileID: 4137398481712135377, guid: 723f20204cb5eaa4c896653535b68685, type: 3}
+      propertyPath: levelNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4137398481712135386, guid: 723f20204cb5eaa4c896653535b68685, type: 3}
       propertyPath: m_Name
       value: caveman_work

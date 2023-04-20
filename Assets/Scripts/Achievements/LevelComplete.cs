@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelComplete : MonoBehaviour
 {
     [SerializeField] private GameObject level;
-    [SerializeField] private GameObject finalizar;
-
-    public bool iscomplete = false;
-
+    [SerializeField] private int levelNumber;
+    private NicknameData data;
+    private string[] scenes;
     // Start is called before the first frame update
     void Start()
     {
-        iscomplete = false;
+        scenes = new string[6]{"Game_Level_1","Game_Level_2","Game_Level_3","Game_Level_4","Game_Level_5", "PrincipalMenu"};
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,7 +31,11 @@ public class LevelComplete : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
+        data = NicknameScript.instance.LoadData();
+        data.acchievements[levelNumber - 1].state = true;
+        NicknameScript.instance.SaveData(data);
         level.SetActive(false);
+        SceneManager.LoadScene(scenes[levelNumber]);
     }
 }
     
