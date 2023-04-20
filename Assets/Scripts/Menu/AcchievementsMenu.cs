@@ -26,14 +26,12 @@ public class AcchievementsMenu : MonoBehaviour
             if (data.acchievements[i].state)
             {
                 number++;
-                Debug.Log(true);
-                var newColor = new Color(191, 191, 191, 255);
+                var newColor = new Color(255, 255, 255, 255);
                 acchievementImage[i*2].GetComponent<Image>().color = newColor;
                 acchievementImage[(i*2)+1].GetComponent<Image>().color = newColor;
             }
             else
             {
-                Debug.Log(false);
                 var newColor = new Color(0, 0, 0, 255);
                 acchievementImage[i*2].GetComponent<Image>().color = newColor;
                 acchievementImage[(i*2)+1].GetComponent<Image>().color = newColor;

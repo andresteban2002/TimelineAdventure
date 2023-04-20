@@ -32,6 +32,15 @@ public class LevelComplete : MonoBehaviour
     {
         Time.timeScale = 1f;
         data = NicknameScript.instance.LoadData();
+        if (levelNumber != 5)
+        {
+            data.matches[NicknameScript.instance.actMatch].levelAct = levelNumber + 1;
+        }
+        else
+        {
+            data.matches[NicknameScript.instance.actMatch].levelAct = 5;
+        }
+
         data.acchievements[levelNumber - 1].state = true;
         NicknameScript.instance.SaveData(data);
         level.SetActive(false);
