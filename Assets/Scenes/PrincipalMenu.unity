@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2093347199}
-  sliderValue: 0
-  imagenMute: {fileID: 490533231}
+  sliderValue: 0.5
+  imagenMute: {fileID: 490533230}
 --- !u!4 &15259558
 Transform:
   m_ObjectHideFlags: 0

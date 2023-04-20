@@ -12,6 +12,7 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] private Text totalStonesText;
     [SerializeField] private string totalStones;
     [SerializeField] private CapsuleCollider2D guard;
+    public AudioSource getItem;
 
     private void Start()
     {
@@ -29,7 +30,8 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             stones++;
             stonesText.text = stones.ToString();
-            changeStateItem(collision.gameObject);             
+            getItem.Play();
+            changeStateItem(collision.gameObject);
         }
     }
 
