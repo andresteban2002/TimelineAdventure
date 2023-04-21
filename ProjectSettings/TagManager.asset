@@ -12,6 +12,7 @@ TagManager:
   - guard
   - Curiosity
   - combustible
+  - fruit
   layers:
   - Default
   - TransparentFX

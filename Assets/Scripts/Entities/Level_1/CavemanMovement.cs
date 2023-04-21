@@ -13,11 +13,9 @@ public class CavemanMovement : MonoBehaviour
     private const string CAVEMAN_WALK = "Caveman_Walk";
     private const string CAVEMAN_ATTACK = "cavemanAttack";
     private Animator _animator;
-    Animator _animatorHarry;
-    private const string HARRY_DAMAGE = "Harry_Damage";
     private string currentStep;
-
     private string direction = "right";
+    public AudioSource attack;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,7 +70,7 @@ public class CavemanMovement : MonoBehaviour
     {
         player.GetComponent<PlayerLife>().nextDamageTime = 1;
         player.GetComponent<PlayerLife>().getNaturalDamage(15);
-        stopAttack();
+        attack.Play();
     }
 
     private void stopAttack()
