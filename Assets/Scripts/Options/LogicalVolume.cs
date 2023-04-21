@@ -7,12 +7,13 @@ public class LogicalVolume : MonoBehaviour
 {
     public Slider slider;
     public float sliderValue;
-    public Image imagenMute;
+    public GameObject imagenMute;
     // Start is called before the first frame update
     void Start()
     {
         slider.value = 0.5f;
         AudioListener.volume = slider.value;
+        sliderValue = 0.5f;
         RevisarSiEstoyMute();
     }
     public void ChangeSlider(float valor)
@@ -27,11 +28,11 @@ public class LogicalVolume : MonoBehaviour
     {
         if (sliderValue == 0)
         {
-            imagenMute.enabled = true;
+            imagenMute.SetActive(true);;
         }
         else
         {
-            imagenMute.enabled = false;
+            imagenMute.SetActive(false);
         }
     }
 

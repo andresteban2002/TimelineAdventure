@@ -9,6 +9,7 @@ public class NicknameData
 {
     public string nickname;
     public List<MatchData> matches;
+    public List<AcchievementsData> acchievements;
 }
 [System.Serializable]
 public class MatchData
@@ -20,4 +21,10 @@ public class MatchData
     public float posY;
     public int life;
     public bool[] collectedItems;
+}
+[System.Serializable]
+public class AcchievementsData
+{
+    public int level;
+    public bool state;
 }

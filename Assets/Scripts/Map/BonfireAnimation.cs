@@ -13,9 +13,8 @@ public class BonfireAnimation : MonoBehaviour
     
     //Animaciones
     Animator _animator;
-    Animator _animatorHarry;
     private const string BONFIRE_ANIMATION = "bonfire_animation";
-    private const string HARRY_DAMAGE = "Harry_Damage";
+    public AudioSource fireDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,18 +31,9 @@ public class BonfireAnimation : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _animatorHarry = other.GetComponent<Animator>();
             nextDamageTime -= Time.deltaTime;
-            if (nextDamageTime < 0.6)
-            {
-                _animatorHarry.StopPlayback();
-                other.GetComponent<HarryMovement>().canMove = true;
-            }
-
             if (nextDamageTime <= 0)
             {
-                _animatorHarry.Play(HARRY_DAMAGE);
-                other.GetComponent<HarryMovement>().canMove = false;
                 other.GetComponent<PlayerLife>().getNaturalDamage(5);
                 nextDamageTime = damageTime;
             }
@@ -54,15 +44,8 @@ public class BonfireAnimation : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _animatorHarry = other.GetComponent<Animator>();
-            nextDamageTime -= Time.deltaTime;
-            if (nextDamageTime < 0.6)
-            {
-                other.GetComponent<HarryMovement>().canMove = true;
-            }
-
-            _animatorHarry.Play(HARRY_DAMAGE);
-            other.GetComponent<HarryMovement>().canMove = false;
+            fireDamage.Play();
+            other.GetComponent<PlayerLife>().nextDamageTime = 1;
             other.GetComponent<PlayerLife>().getNaturalDamage(10);
             nextDamageTime = 1;
         }

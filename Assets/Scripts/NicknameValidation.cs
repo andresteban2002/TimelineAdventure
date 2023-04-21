@@ -48,8 +48,7 @@ public class NicknameValidation : MonoBehaviour
             {
                 newMatchButton.SetActive(true);
             }
-        }
-        else
+        }else
         {
             gameObject.GetComponent<NicknameScript>().SaveData(data);
         }
