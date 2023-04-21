@@ -1,4 +1,4 @@
-﻿using System;
+﻿           using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
@@ -11,10 +11,12 @@ public class CavewomanMovement : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private const string CAVEWOMAN_WALK = "Cavewoman_Walk";
+    private const string CAVEWOMAN_ATTACK = "Cavewoman_Attack";
     private Animator _animator;
     private string currentStep;
-
     private string direction = "right";
+    public AudioSource attack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,5 +60,22 @@ public class CavewomanMovement : MonoBehaviour
                 direction = "right";
             }
         }
+
+        if (other.CompareTag("Player") && !GetComponent<CavewomanLife>().isDeath)
+        {
+            changeAnimationState(CAVEWOMAN_ATTACK);
+        }
+    }
+    
+    private void startAttack()
+    {
+        player.GetComponent<PlayerLife>().nextDamageTime = 1;
+        attack.Play();
+        player.GetComponent<PlayerLife>().getNaturalDamage(20);
+    }
+    
+    private void stopAttack()
+    {
+        changeAnimationState(CAVEWOMAN_WALK);
     }
 }
