@@ -13,6 +13,7 @@ TagManager:
   - Curiosity
   - combustible
   - fruit
+  - ItemCollected
   layers:
   - Default
   - TransparentFX
