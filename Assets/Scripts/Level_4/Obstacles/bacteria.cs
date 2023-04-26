@@ -36,6 +36,7 @@ public class bacteria : MonoBehaviour
             nextDamageTime -= Time.deltaTime;
             if (nextDamageTime < 0.6)
             {
+                Debug.Log(nextDamageTime);
                 _animatorHarry.StopPlayback();
                 other.GetComponent<HarryMovement>().canMove = true;
             }
@@ -43,7 +44,7 @@ public class bacteria : MonoBehaviour
             if (nextDamageTime <= 0)
             {
                 _animatorHarry.Play(HARRY_DAMAGE);
-                other.GetComponent<HarryMovement>().canMove = false;
+                //other.GetComponent<HarryMovement>().canMove = false;
                 other.GetComponent<PlayerLife>().getNaturalDamage(5);
                 nextDamageTime = damageTime;
             }
@@ -62,7 +63,7 @@ public class bacteria : MonoBehaviour
             }
 
             _animatorHarry.Play(HARRY_DAMAGE);
-            other.GetComponent<HarryMovement>().canMove = false;
+            //other.GetComponent<HarryMovement>().canMove = false;
             other.GetComponent<PlayerLife>().getNaturalDamage(10);
             nextDamageTime = 1;
         }

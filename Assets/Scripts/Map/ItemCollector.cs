@@ -18,6 +18,13 @@ public class ItemCollector : MonoBehaviour
             stonesText.text = stones.ToString();
             changeStateItem(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("pill"))
+        {
+            Destroy(collision.gameObject);
+            stones++;
+            stonesText.text = stones.ToString();
+            changeStateItem(collision.gameObject);
+        }
     }
 
     public Vector2 GetPosition(){
