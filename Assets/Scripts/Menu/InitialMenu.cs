@@ -20,7 +20,7 @@ public class InitialMenu : MonoBehaviour
 
     private void Start()
     {
-        scenes = new string[5]{"Game_Level_1","Game_Level_2","Game_Level_3","Game_Level_4","Game_Level_5"};
+        scenes = new string[6]{"Game_Level_1","Game_Level_2","Game_Level_3","Game_Level_4","Game_Level_5", "Thanks_Screen"};
         data = new NicknameData();
         matchData = new MatchData();
         for (int i = 0; i < 5; i++)
