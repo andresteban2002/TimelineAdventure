@@ -12,7 +12,7 @@ public class LevelComplete : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scenes = new string[6]{"Game_Level_1","Game_Level_2","Game_Level_3","Game_Level_4","Game_Level_5", "PrincipalMenu"};
+        scenes = new string[6]{"Game_Level_1","Game_Level_2","Game_Level_3","Game_Level_4","Game_Level_5", "Thanks_Screen"};
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
