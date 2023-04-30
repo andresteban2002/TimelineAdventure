@@ -33,6 +33,13 @@ public class ItemCollector : MonoBehaviour
             getItem.Play();
             changeStateItem(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("pill"))
+        {
+            Destroy(collision.gameObject);
+            stones++;
+            stonesText.text = stones.ToString();
+            changeStateItem(collision.gameObject);
+        }
     }
 
     private void Update()
