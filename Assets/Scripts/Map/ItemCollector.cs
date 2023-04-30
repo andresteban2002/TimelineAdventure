@@ -9,6 +9,20 @@ public class ItemCollector : MonoBehaviour
 {
     private int stones;
     [SerializeField] private Text stonesText;
+    [SerializeField] private Text totalStonesText;
+    [SerializeField] private string totalStones;
+    [SerializeField] private CapsuleCollider2D guard;
+    public AudioSource getItem;
+
+    private void Start()
+    {
+        if (totalStones != null)
+        {
+            totalStones = "20";
+        }
+        totalStonesText.text = totalStones;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("stone"))
@@ -16,6 +30,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             stones++;
             stonesText.text = stones.ToString();
+            getItem.Play();
             changeStateItem(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("pill"))
@@ -24,6 +39,16 @@ public class ItemCollector : MonoBehaviour
             stones++;
             stonesText.text = stones.ToString();
             changeStateItem(collision.gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (stones == int.Parse(totalStones))
+        {
+            guard.isTrigger = true;
+            stonesText.color = new Color(193, 153, 0);
+            totalStonesText.color = new Color(193, 153, 0);
         }
     }
 
@@ -41,9 +66,7 @@ public class ItemCollector : MonoBehaviour
 
     public void changeStateItem(GameObject stone)
     {
-        Debug.Log(NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].collectedItems.Length+" - "+Array.IndexOf(saveSystem.instance.stonesItem, stone));
         NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].collectedItems[Array.IndexOf(saveSystem.instance.stonesItem, stone)] = false;
-        Debug.Log(NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].collectedItems.Length+" - "+Array.IndexOf(saveSystem.instance.stonesItem, stone));
     }
     
     public void SetStones(int cant)

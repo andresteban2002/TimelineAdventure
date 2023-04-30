@@ -21,6 +21,7 @@ public class LogicalBright : MonoBehaviour
         
     }
 
+    
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;

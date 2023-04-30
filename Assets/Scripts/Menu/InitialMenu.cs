@@ -12,6 +12,7 @@ public class InitialMenu : MonoBehaviour
     public bool isnew = true;
     private NicknameData data;
     private MatchData matchData;
+    private AcchievementsData acchievements;
     [SerializeField] private Button[] matches;
 
     private string[] scenes;
@@ -38,6 +39,18 @@ public class InitialMenu : MonoBehaviour
         matchData.collectedItems = new bool[20] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true };
         data = gameObject.GetComponent<NicknameScript>().LoadData();
         data.matches.Add(matchData);
+        if (data.acchievements.Count==0)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                acchievements = new AcchievementsData();
+                acchievements.state = false;
+                data.acchievements.Add(acchievements);
+                data.acchievements[i].level = i + 1;
+                data.acchievements[i].state = false;
+            }
+        }
+
         gameObject.GetComponent<NicknameScript>().actMatch = data.matches.Count - 1;
         gameObject.GetComponent<NicknameScript>().SaveData(data);
         SceneManager.LoadScene("Game_Level_1");
