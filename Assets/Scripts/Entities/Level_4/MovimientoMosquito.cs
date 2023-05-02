@@ -10,8 +10,8 @@ public class MovimientoMosquito : MonoBehaviour
     public GameObject player;
 
     private SpriteRenderer _spriteRenderer;
-    private const string CAVEMAN_WALK = "Caveman_Walk";
-    private const string CAVEMAN_ATTACK = "cavemanAttack";
+    private const string MOSQUITO_WALK = "Mosquito_Walk";
+    //private const string CAVEMAN_ATTACK = "cavemanAttack";
     private Animator _animator;
     Animator _animatorHarry;
     private const string HARRY_DAMAGE = "Harry_Damage";
@@ -23,7 +23,7 @@ public class MovimientoMosquito : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
-        changeAnimationState(CAVEMAN_WALK);
+        changeAnimationState(MOSQUITO_WALK);
     }
 
     // Update is called once per frame
@@ -80,19 +80,19 @@ public class MovimientoMosquito : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Player"))
-        {
-            changeAnimationState(CAVEMAN_ATTACK);
-            _animatorHarry = other.GetComponent<Animator>();
-            _animatorHarry.Play(HARRY_DAMAGE);
-            other.GetComponent<PlayerLife>().getNaturalDamage(15);
+        //if (other.CompareTag("Player"))
+        //{
+            //changeAnimationState(MOSQUITO_ATTACK);
+            //_animatorHarry = other.GetComponent<Animator>();
+            //_animatorHarry.Play(HARRY_DAMAGE);
+            //other.GetComponent<PlayerLife>().getNaturalDamage(15);
             //isAttack = true;
-        }
+        //}
         
     }
 
     private void stopAttack()
     {
-        changeAnimationState(CAVEMAN_WALK);
+        changeAnimationState(MOSQUITO_WALK);
     }
 }
