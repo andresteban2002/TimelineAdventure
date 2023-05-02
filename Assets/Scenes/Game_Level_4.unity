@@ -12904,11 +12904,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5903775022918373728, guid: 503052d6c5651b44c8847a986b199bda, type: 3}
       propertyPath: m_Size.y
-      value: 4.492079
+      value: 1.0571473
       objectReference: {fileID: 0}
     - target: {fileID: 5903775022918373728, guid: 503052d6c5651b44c8847a986b199bda, type: 3}
       propertyPath: m_Offset.y
-      value: 0.16934967
+      value: -0.027736634
       objectReference: {fileID: 0}
     - target: {fileID: 5903775022918373728, guid: 503052d6c5651b44c8847a986b199bda, type: 3}
       propertyPath: m_IsTrigger
@@ -14508,11 +14508,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5903775022918373728, guid: 503052d6c5651b44c8847a986b199bda, type: 3}
       propertyPath: m_Size.y
-      value: 4.4920783
+      value: 1.0571474
       objectReference: {fileID: 0}
     - target: {fileID: 5903775022918373728, guid: 503052d6c5651b44c8847a986b199bda, type: 3}
       propertyPath: m_Offset.y
-      value: 0.16934943
+      value: -0.084047005
       objectReference: {fileID: 0}
     - target: {fileID: 5903775022918373728, guid: 503052d6c5651b44c8847a986b199bda, type: 3}
       propertyPath: m_IsTrigger
