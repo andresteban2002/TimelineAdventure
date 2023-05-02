@@ -66,8 +66,10 @@ public class MovimientoMosquito : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(direction);
         if (other.CompareTag("enemyLimit"))
         {
+            Debug.Log(direction);
             if (direction == "right")
             {
                 _spriteRenderer.flipX = true;
