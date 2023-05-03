@@ -19581,7 +19581,7 @@ MonoBehaviour:
   speed: 10
   shootSpeed: 1
   timer: 0
-  bullet: {fileID: 1314794242240054726, guid: e3463971f3c8c874c922885778d4feba, type: 3}
+  bullet: {fileID: 8700120636702855006, guid: e3463971f3c8c874c922885778d4feba, type: 3}
 --- !u!212 &1824635869
 SpriteRenderer:
   m_ObjectHideFlags: 0
