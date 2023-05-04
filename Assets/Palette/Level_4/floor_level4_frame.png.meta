@@ -1,0 +1,1971 @@
+fileFormatVersion: 2
+guid: c9b39cecfd34cc34c911337817456a16
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: floor_level4_frame_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1768
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3eeb9c42fd94f4fb7741d0e23e7079
+      internalID: -416900269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1768
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268919a291e6a834280ebc7c29c34df1
+      internalID: 2045635539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1768
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e777da805e86f3144b562a03240649e0
+      internalID: 1287679925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_3
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1768
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd4bb8dcd2da244fba0df226443ff58
+      internalID: 656802429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_4
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1768
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9450a898a35e584d9073fca1ab84256
+      internalID: 1451431387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_5
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1768
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c1a642296483a41bd260476a70402a
+      internalID: 230192304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_6
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1768
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da2c0425db5af04ca62c05935ffdf35
+      internalID: 582228762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1611
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8009c53b78c9804d95b64faa4819bf7
+      internalID: -1461160028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_8
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1611
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea2546902a045b4faa829f10dbab7ec
+      internalID: 1102322837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_9
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1611
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56a131964dd48f4b954a70bd738f56d
+      internalID: -1493465089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_10
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1611
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d080acf0313474aa2f34f52aaa9640
+      internalID: -1620223549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_11
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1611
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63a114ab177f904a945b04960f8f2e0
+      internalID: 1933454379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_12
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1611
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc21505e09390344b2e58805a8ebe76
+      internalID: 1345596743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_13
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1611
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c6ff97c4e592f40ab93c1f61cd1d9b
+      internalID: -688975478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1454
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6a8437e26fdd04186280f4a19d14e9
+      internalID: 1102655784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_15
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1454
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ad3648fe5e2d54a9e06dd64e8a9c35
+      internalID: 1799264825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_16
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1454
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2734c2a8b1865da4baa0ca57db43cf5a
+      internalID: -1489303677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_17
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1454
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915ef0e3bb89274469b07d653ef9ebc9
+      internalID: -971541805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_18
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1454
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e43a1fcda1f77f4692e9a5b27c8aa2e
+      internalID: 1664027504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_19
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1454
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0c12b892225af45a1bcb6c29139cdd
+      internalID: -464282519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_20
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1454
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d286b973b6ec6c498021865a214b10c
+      internalID: 450212349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1297
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69babf966c9afb46a13b8c62216df45
+      internalID: 1783312712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_22
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1297
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83a4758b5caaa74ba78065d65cd4320
+      internalID: 985675372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_23
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1297
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021674e4d67ffd04981adf584edbd804
+      internalID: -1489201660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_24
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1297
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0ae85c64f218745b8c36c16d07a1b4
+      internalID: -1762357099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_25
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1297
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db52e48a02fb520449c90c7a71cab90a
+      internalID: -1588457814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_26
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1297
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d86663874a04e45a12a0a474a8c386
+      internalID: 1804048058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_27
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1297
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9f926bc94e63f4f9d221663faedecf
+      internalID: 1580783107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1140
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a137503e13aab43820a7f400b7cbe5
+      internalID: -898177952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_29
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 1140
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155bd9c1f2e5ffe4182c7346f96414d6
+      internalID: 1221288720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_30
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1140
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2c200273c239e4c8bf3fc95e5b40b7
+      internalID: 1255942358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_31
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 1140
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df97c5ae12e335447ba36eb625e665c0
+      internalID: -775524303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_32
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1140
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfe9d0672a39dd4cba4551ae3023f32
+      internalID: -1415446206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_33
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1140
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abd6350d47a80e4b8b2f50caac3b979
+      internalID: -595070523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_34
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1140
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c091d38f270cd04b84232b8574f6ff4
+      internalID: 1740086299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 983
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10a7129214b3ee4499dd33bee612dea
+      internalID: -1280306133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_36
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 983
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c667e60ecd41144990c9da6623d145
+      internalID: -820323908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_37
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 983
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395a71fb6c617f140b572fb091838b49
+      internalID: -405418128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_38
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 983
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e03db93b3c28bf45909a70ae7936906
+      internalID: -1577920476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_39
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 983
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419122b7b9150b9478a2f61db747df23
+      internalID: -1584022401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_40
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 983
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9a6ca38f3888d44a6c877b8a854b92
+      internalID: 1309776119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_41
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 983
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495992ecada6e15489f182b07aa97f82
+      internalID: 1820004705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 826
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d5557eb250e274aa7a69c5cad522d6
+      internalID: -532272123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_43
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 826
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d0f006cd9acd3418d6c2c5bba3a388
+      internalID: -1600533917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_44
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 826
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5b73aa5ed13a9438ca3547a2ddcd4c
+      internalID: -396893558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_45
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 826
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14edda30a9fe94459695bc0d6ea1617
+      internalID: -663597608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_46
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 826
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504b7f5fe74de044aad9ca944d0aa612
+      internalID: 1869912977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_47
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 826
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd5dc882650d4d4aa6d8eeacd17b715
+      internalID: 878874071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_48
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 826
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dac0b65cb9c29499d4817ff3487bfa
+      internalID: -175547668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 669
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4817c509fda6741b6effd40c4fe9dd
+      internalID: 1221102387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_50
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 669
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8640e1ae3940bdd47b7e14bf1a8b5163
+      internalID: -1808608855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_51
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 669
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d142f317de4e09848ba204c6715f392a
+      internalID: 2103287195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_52
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 669
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881a3d9a7ed857a49ac6ab27a37fdb18
+      internalID: -1190173480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_53
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 669
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55d2dcb4c065324d913cc4df61238e1
+      internalID: -1228256706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_54
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 669
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fff90adcd90d64c9f2ea76f69dc521
+      internalID: 1625182616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_55
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 669
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fdec4826db7f34d9ab62e82610050a
+      internalID: -1119884762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b06abec3d65f6b4782d7d62eaa3e601
+      internalID: -2014844218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_57
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 512
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f05c4d1fe5d424daf6960bdf92e02b
+      internalID: 155611253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_58
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 512
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875458fc8a7760147b0324096767f458
+      internalID: -1723372435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_59
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 512
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cf98812495cdd47a9aada925a51fea
+      internalID: 2014445230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_60
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 512
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea57999fce96604ba63891c7534db56
+      internalID: -806635431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_61
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 512
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27051230bf60024daa6c19a2f1bc8b4
+      internalID: 2039893589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_62
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 512
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72bbea4cd2aa344792a3801be4e5f0f
+      internalID: 1830028559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 355
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ef59b7e8a331b4bb85ec2e90e18023
+      internalID: -1014085616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_64
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 355
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d8fda023893844eaf0a30e4c7335b4
+      internalID: 2058551929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_65
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 355
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373bf80e737ab2049b6c5f2d31192657
+      internalID: 1627166486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_66
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 355
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb160d2e90c5484696e15bcebb80b45
+      internalID: 210152813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_67
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 355
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bd0d91858ac484ab826ad1bb2ee76d
+      internalID: 1244794311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_68
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 355
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a0cd0adea49e447afa28986c629ca8
+      internalID: 1678926151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_69
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 355
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2989f1fd0d426cc46babbb26267f1160
+      internalID: -98726762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c2540fcad4b474d916f77efefd26ed
+      internalID: -1032381483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_71
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 198
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1458880b2def5d244b46f39d20ba1e2b
+      internalID: 437459705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_72
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 198
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526eae017316c9843af183ad35ed9cfa
+      internalID: -515851766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_73
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 198
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0eedf9bd782174e9877251ae5885bc
+      internalID: -666495060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_74
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 198
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655085011a119874e9688b395495e19d
+      internalID: -437729588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_75
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 198
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a025b0981ec17f4d86488a9a6f0b0bb
+      internalID: -1893261908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_76
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 198
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccecc3321816ff54780506c385d73dd7
+      internalID: -1772526466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d5c7e5e363e3e4a89438ee2580ca00
+      internalID: 861921776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_78
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 41
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bf29d10475a96489b9d6581a589e07
+      internalID: 1015380667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_79
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 41
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ca55d9e59231046b26ccd5258c02b7
+      internalID: -1038310514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_80
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 41
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15079880791e75d429fc803e8d730e06
+      internalID: 1843813128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_81
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 41
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5691a9ed58abfb43bf3a55c519b9cd1
+      internalID: 251824803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_82
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 41
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ce1aea568f6c449829621b03271930
+      internalID: 1790358415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_level4_frame_83
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 41
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff6058dfe8b102499467e90c3cb19ee
+      internalID: -99330306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      floor_level4_frame_10: -1620223549
+      floor_level4_frame_36: -820323908
+      floor_level4_frame_50: -1808608855
+      floor_level4_frame_47: 878874071
+      floor_level4_frame_83: -99330306
+      floor_level4_frame_35: -1280306133
+      floor_level4_frame_21: 1783312712
+      floor_level4_frame_5: 230192304
+      floor_level4_frame_13: -688975478
+      floor_level4_frame_26: 1804048058
+      floor_level4_frame_31: -775524303
+      floor_level4_frame_17: -971541805
+      floor_level4_frame_58: -1723372435
+      floor_level4_frame_57: 155611253
+      floor_level4_frame_18: 1664027504
+      floor_level4_frame_46: 1869912977
+      floor_level4_frame_70: -1032381483
+      floor_level4_frame_77: 861921776
+      floor_level4_frame_7: -1461160028
+      floor_level4_frame_62: 1830028559
+      floor_level4_frame_41: 1820004705
+      floor_level4_frame_80: 1843813128
+      floor_level4_frame_79: -1038310514
+      floor_level4_frame_53: -1228256706
+      floor_level4_frame_82: 1790358415
+      floor_level4_frame_11: 1933454379
+      floor_level4_frame_1: 2045635539
+      floor_level4_frame_14: 1102655784
+      floor_level4_frame_4: 1451431387
+      floor_level4_frame_19: -464282519
+      floor_level4_frame_33: -595070523
+      floor_level4_frame_25: -1588457814
+      floor_level4_frame_45: -663597608
+      floor_level4_frame_44: -396893558
+      floor_level4_frame_30: 1255942358
+      floor_level4_frame_6: 582228762
+      floor_level4_frame_60: -806635431
+      floor_level4_frame_23: -1489201660
+      floor_level4_frame_49: 1221102387
+      floor_level4_frame_76: -1772526466
+      floor_level4_frame_51: 2103287195
+      floor_level4_frame_22: 985675372
+      floor_level4_frame_16: -1489303677
+      floor_level4_frame_66: 210152813
+      floor_level4_frame_61: 2039893589
+      floor_level4_frame_37: -405418128
+      floor_level4_frame_54: 1625182616
+      floor_level4_frame_63: -1014085616
+      floor_level4_frame_69: -98726762
+      floor_level4_frame_34: 1740086299
+      floor_level4_frame_27: 1580783107
+      floor_level4_frame_42: -532272123
+      floor_level4_frame_2: 1287679925
+      floor_level4_frame_78: 1015380667
+      floor_level4_frame_71: 437459705
+      floor_level4_frame_43: -1600533917
+      floor_level4_frame_64: 2058551929
+      floor_level4_frame_81: 251824803
+      floor_level4_frame_67: 1244794311
+      floor_level4_frame_48: -175547668
+      floor_level4_frame_68: 1678926151
+      floor_level4_frame_74: -437729588
+      floor_level4_frame_38: -1577920476
+      floor_level4_frame_8: 1102322837
+      floor_level4_frame_59: 2014445230
+      floor_level4_frame_9: -1493465089
+      floor_level4_frame_39: -1584022401
+      floor_level4_frame_73: -666495060
+      floor_level4_frame_65: 1627166486
+      floor_level4_frame_20: 450212349
+      floor_level4_frame_29: 1221288720
+      floor_level4_frame_52: -1190173480
+      floor_level4_frame_28: -898177952
+      floor_level4_frame_56: -2014844218
+      floor_level4_frame_75: -1893261908
+      floor_level4_frame_12: 1345596743
+      floor_level4_frame_40: 1309776119
+      floor_level4_frame_72: -515851766
+      floor_level4_frame_15: 1799264825
+      floor_level4_frame_32: -1415446206
+      floor_level4_frame_24: -1762357099
+      floor_level4_frame_0: -416900269
+      floor_level4_frame_3: 656802429
+      floor_level4_frame_55: -1119884762
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

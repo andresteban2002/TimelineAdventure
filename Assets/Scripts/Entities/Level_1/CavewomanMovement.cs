@@ -15,6 +15,8 @@ public class CavewomanMovement : MonoBehaviour
     private Animator _animator;
     private string currentStep;
     private string direction = "right";
+    public AudioSource attack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +70,7 @@ public class CavewomanMovement : MonoBehaviour
     private void startAttack()
     {
         player.GetComponent<PlayerLife>().nextDamageTime = 1;
+        attack.Play();
         player.GetComponent<PlayerLife>().getNaturalDamage(20);
     }
     

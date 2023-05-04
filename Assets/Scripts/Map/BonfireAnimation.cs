@@ -14,6 +14,7 @@ public class BonfireAnimation : MonoBehaviour
     //Animaciones
     Animator _animator;
     private const string BONFIRE_ANIMATION = "bonfire_animation";
+    public AudioSource fireDamage;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class BonfireAnimation : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            fireDamage.Play();
             other.GetComponent<PlayerLife>().nextDamageTime = 1;
             other.GetComponent<PlayerLife>().getNaturalDamage(10);
             nextDamageTime = 1;

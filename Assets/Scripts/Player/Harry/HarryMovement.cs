@@ -6,6 +6,9 @@ public class HarryMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     //Movimientos
+    public AudioSource steps;
+    public AudioSource jump;
+    public AudioSource throwsBoomerang;
     public float JumpForce;
     public float Speed;
     private Rigidbody2D _rigidbody2D;
@@ -13,6 +16,7 @@ public class HarryMovement : MonoBehaviour
     private float _vertical;
     private bool Grounded;
     public bool canMove = true;
+    private bool HActive;
     
     //Combate
     public GameObject BoomerangPrefab;
@@ -38,6 +42,8 @@ public class HarryMovement : MonoBehaviour
 
     void Start()
     {
+        steps.Play();
+        HActive = false;
         canMove = true;
         _transform = GetComponent<Transform>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -81,12 +87,18 @@ public class HarryMovement : MonoBehaviour
     private void Jump()
     {
         _rigidbody2D.AddForce(Vector2.up * JumpForce);
+        jump.Play();
     }
 
     private void FixedUpdate()
     {
         if (_horizontal != 0 && canMove)
         {
+            if (!HActive)
+            {
+                steps.Play();
+            }
+            HActive = true;
             _rigidbody2D.velocity = new Vector2(_horizontal*Speed, _rigidbody2D.velocity.y);
             if (_horizontal > 0)
             {
@@ -106,6 +118,8 @@ public class HarryMovement : MonoBehaviour
             if (!isThrows && hasBoomerang)
             {
                 changeAnimationState(HARRY_QUIET);
+                HActive = false;
+                steps.Pause();
             }
             else if(!hasBoomerang)
             {
@@ -125,15 +139,11 @@ public class HarryMovement : MonoBehaviour
         currentStep = newState;
         if (newState == "quiet")
         {
+            steps.Pause();
             _animator.Play((HARRY_QUIET));
             currentStep = newState;
         }
     }
-
-    /*public void rebound(Vector2 hitPoint)
-    {
-        Rigidbody2D.velocity = new Vector2(reboundVelocity.x * hitPoint.x, reboundVelocity.y);
-    }*/
 
     private void Shoot()
     {
@@ -146,7 +156,7 @@ public class HarryMovement : MonoBehaviour
         {
             direction = Vector2.left;
         }
-        
+        throwsBoomerang.Play();
         boomerang =
             Instantiate(BoomerangPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         boomerang.GetComponent<BoomerangScript>().SetDirection(direction);
@@ -164,8 +174,6 @@ public class HarryMovement : MonoBehaviour
             float rotate = Vector3.Cross(direction, transform.up).z;
             boomerang.GetComponent<Rigidbody2D>().angularVelocity = -rotate * 1f;
             boomerang.GetComponent<Rigidbody2D>().velocity = transform.up * 15f;
-            
-            
             boomerang.GetComponent<BoomerangScript>().SetDirection(direction);
             isThrows = false;
         }
@@ -181,6 +189,7 @@ public class HarryMovement : MonoBehaviour
                 Destroy(collision.gameObject);
                 hasBoomerang = true;
                 GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                throwsBoomerang.Pause();
             }
         }
 
@@ -197,4 +206,6 @@ public class HarryMovement : MonoBehaviour
             dialog.SetActive(false);
         }
     }
+
+    
 }

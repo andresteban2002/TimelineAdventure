@@ -8,7 +8,7 @@ public class CavewomanLife : MonoBehaviour
     private Animator _animator;
     [SerializeField] int life;
     public bool isDeath;
-
+    public AudioSource damage;
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -52,7 +52,8 @@ public class CavewomanLife : MonoBehaviour
         {
             if (other.CompareTag("Boomerang"))
             {
-                getNaturalDamage(15);
+                getNaturalDamage(20);
+                damage.Play();
             }
         }
     }
