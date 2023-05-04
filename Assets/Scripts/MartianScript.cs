@@ -24,7 +24,7 @@ public class MartianScript : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
+    {        
         Vector3 scale = transform.localScale;
 
         if (target.transform.position.x > transform.position.x) {
@@ -43,23 +43,28 @@ public class MartianScript : MonoBehaviour
     void Attack()
     {
         Quaternion rot=new Quaternion(0,0,-0.9f,0);
-        if (timer > 0) timer -= Time.deltaTime;
-        if (timer <= 0)
+        // if (timer > 0) timer -= Time.deltaTime;
+        // if (timer <= 0)
+        // {
+        //     if (bullet != null)
+        //     {
+        //         Bullet newBullet = Instantiate(bullet, transform.position, rot);
+        //         timer = 0;
+        //     }
+        //     timer = shootSpeed;
+        // }
+
+        timer += Time.deltaTime;
+        if (timer >= 2)
         {
-            if (bullet != null)
-            {
-                Bullet newBullet = Instantiate(bullet, transform.position, rot);
-                timer = 0;
-            }
-            timer = shootSpeed;
+            Instantiate(bullet, transform.position, rot);
+            timer = 0;
         }
     }
 
    
     private void FixedUpdate() {
         if (target != null) {
-            Debug.Log(transform.position);
-
             if (transform.position.y > topLimit) {
                 rb.velocity = -transform.up * speed;
             } else if (transform.position.y < bottomLimit) {
