@@ -11,13 +11,11 @@ public class MovimientoMosquito : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private const string MOSQUITO_WALK = "Mosquito_Walk";
-    //private const string CAVEMAN_ATTACK = "cavemanAttack";
+    private const string MOSQUITO_ATTACK = "Mosquito_Attack";
     private Animator _animator;
-    Animator _animatorHarry;
-    private const string HARRY_DAMAGE = "Harry_Damage";
     private string currentStep;
-
     private string direction = "right";
+    public AudioSource attack;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,20 +35,6 @@ public class MovimientoMosquito : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * 4.0f);
         }
-
-        /*if (!isAttack)
-        { 
-            changeAnimationState(CAVEMAN_WALK);
-        }
-        else
-        {
-            attackTime -= Time.deltaTime;
-            if (attackTime < 0.6)
-            {
-                _animator.StopPlayback();
-                isAttack = false;
-            }
-        }*/
     }
     
     public void changeAnimationState(string newState)
@@ -60,16 +44,10 @@ public class MovimientoMosquito : MonoBehaviour
         currentStep = newState;
     }
 
-    private void FixedUpdate()
-    {
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(direction);
         if (other.CompareTag("enemyLimit"))
         {
-            Debug.Log(direction);
             if (direction == "right")
             {
                 _spriteRenderer.flipX = true;
@@ -82,15 +60,17 @@ public class MovimientoMosquito : MonoBehaviour
             }
         }
 
-        //if (other.CompareTag("Player"))
-        //{
-            //changeAnimationState(MOSQUITO_ATTACK);
-            //_animatorHarry = other.GetComponent<Animator>();
-            //_animatorHarry.Play(HARRY_DAMAGE);
-            //other.GetComponent<PlayerLife>().getNaturalDamage(15);
-            //isAttack = true;
-        //}
-        
+        if (other.CompareTag("Player") && !GetComponent<Life_Mosquito>().isDeath)
+        {
+            changeAnimationState(MOSQUITO_ATTACK);
+        }
+    }
+
+    private void startAttack()
+    {
+        player.GetComponent<PlayerLife>().nextDamageTime = 1;
+        player.GetComponent<PlayerLife>().getNaturalDamage(15);
+        attack.Play();
     }
 
     private void stopAttack()
