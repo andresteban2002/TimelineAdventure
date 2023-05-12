@@ -24,6 +24,6 @@ public class Thanks_Screen : MonoBehaviour
     
     public void credits_Screen()
     {
-        SceneManager.LoadScene("Credits_Screen");
+        SceneManager.LoadScene("Credits_Scene");
     }
 }
