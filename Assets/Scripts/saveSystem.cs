@@ -15,17 +15,17 @@ public class saveSystem : MonoBehaviour
 
     private void Start()
     {
-        data = NicknameScript.instance.LoadData();
-        matchData = data.matches[NicknameScript.instance.actMatch];
-        LoadGame();
-        for (var i = 0; i < stonesItem.Length; i++)
-        {
-            stonesItem[i].SetActive(matchData.collectedItems[i]);
-            if (!matchData.collectedItems[i])
-            {
-                playerScr.SetStones(playerScr.GetStones()+1);
-            }
-        }
+        // data = NicknameScript.instance.LoadData();
+        // matchData = data.matches[NicknameScript.instance.actMatch];
+        // LoadGame();
+        // for (var i = 0; i < stonesItem.Length; i++)
+        // {
+        //     stonesItem[i].SetActive(matchData.collectedItems[i]);
+        //     if (!matchData.collectedItems[i])
+        //     {
+        //         playerScr.SetStones(playerScr.GetStones()+1);
+        //     }
+        // }
     }
 
     private void Awake(){

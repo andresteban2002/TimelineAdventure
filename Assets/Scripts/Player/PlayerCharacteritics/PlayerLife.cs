@@ -31,7 +31,7 @@ public class PlayerLife : MonoBehaviour
         animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         lifebar.StartLifeBar(100);
-        life = NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].life;
+        // life = NicknameScript.instance.data.matches[NicknameScript.instance.actMatch].life;
         lifebar.ChangeCurrentLife(life);
     }
 

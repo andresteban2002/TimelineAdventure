@@ -42,7 +42,10 @@ public class HarryMovement : MonoBehaviour
 
     void Start()
     {
-        steps.Play();
+        if (steps != null){
+            steps.Play();
+        }
+        
         HActive = false;
         canMove = true;
         _transform = GetComponent<Transform>();

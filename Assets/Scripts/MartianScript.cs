@@ -6,6 +6,7 @@ public class MartianScript : MonoBehaviour
 {
     public Transform target;
     private Rigidbody2D rb;
+    private GameObject player;
 
     public float distanceToStop = 5f;
     public float topLimit = 55;
@@ -13,13 +14,27 @@ public class MartianScript : MonoBehaviour
     public float speed = 3f;
 
     public float shootSpeed;
-    public float timer; 
-    [SerializeField] Bullet bullet;
+    private float timer; 
+    public GameObject bullet;
+    public GameObject round_bullet;
+    public GameObject round_bullet2;
+    public GameObject round_bullet3;
+    public GameObject round_bullet4;
+    public Transform bulletPos;
+    public Transform bullet2Pos;
+    public Transform roundBullet1Pos;
+    public Transform roundBullet2Pos;
+    public Transform roundBullet3Pos;
+    public Transform roundBullet4Pos;
+
+    private bool shooting_first_bullet = true;
+    private bool shooting_second_bullet = true;    
 
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -37,32 +52,56 @@ public class MartianScript : MonoBehaviour
 
         transform.localScale = scale;
 
-        Attack();
+        if (player != null)
+        {
+            Attack();
+        }
     }
 
     void Attack()
     {
-        Quaternion rot=new Quaternion(0,0,-0.9f,0);
-        // if (timer > 0) timer -= Time.deltaTime;
-        // if (timer <= 0)
-        // {
-        //     if (bullet != null)
-        //     {
-        //         Bullet newBullet = Instantiate(bullet, transform.position, rot);
-        //         timer = 0;
-        //     }
-        //     timer = shootSpeed;
-        // }
+        float distance = Vector2.Distance(transform.position, target.position);
 
-        timer += Time.deltaTime;
-        if (timer >= 2)
+        if (distance > 5)
         {
-            Instantiate(bullet, transform.position, rot);
-            timer = 0;
+            timer += Time.deltaTime;
+            if (Mathf.Round(timer) == 2 & shooting_first_bullet)
+            {
+                if (bullet != null)
+                {
+                    Instantiate(bullet, bullet2Pos.position, Quaternion.identity);
+                    shooting_first_bullet = false;
+                }                
+            }
+
+            if (Mathf.Round(timer) > 2 & shooting_second_bullet)
+            {
+                if (bullet != null)
+                {
+                    Instantiate(bullet, bulletPos.position, Quaternion.identity);                    
+
+                    shooting_second_bullet = false;
+                }                
+            }
+
+            if (Mathf.Round(timer) > 4)
+            {
+                if (bullet != null)
+                {
+                    Instantiate(round_bullet, roundBullet1Pos.position, Quaternion.identity);
+                    Instantiate(round_bullet2, roundBullet2Pos.position, Quaternion.identity);
+                    Instantiate(round_bullet3, roundBullet3Pos.position, Quaternion.identity);
+                    Instantiate(round_bullet4, roundBullet4Pos.position, Quaternion.identity);
+                    
+                    shooting_first_bullet = true;
+                    shooting_second_bullet = true;
+                    timer = 0;
+                }                
+            }
         }
     }
 
-   
+
     private void FixedUpdate() {
         if (target != null) {
             if (transform.position.y > topLimit) {
