@@ -5,13 +5,12 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class NpcIntroScript : MonoBehaviour
+public class NpcEndingScript : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
     public string[] dialogue;
     private int index;
-    public GameObject instrucciones;
 
     public GameObject contButton;
     public float wordSpeed;
@@ -21,9 +20,8 @@ public class NpcIntroScript : MonoBehaviour
     void Start()
     {
         dialogueText.text = "";
-        instrucciones.SetActive(false);
         StartCoroutine(Typing());
-    }
+    } 
 
     // Update is called once per frame
     void Update()
@@ -40,13 +38,7 @@ public class NpcIntroScript : MonoBehaviour
 
         if (index == dialogue.Length - 1)
         {
-            instrucciones.SetActive(true);
             contButton.SetActive(false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene("Game_Level_5");
         }
     }
 

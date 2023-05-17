@@ -24,6 +24,7 @@ public class PlayerLife : MonoBehaviour
     
     public AudioSource getFruit;
     public AudioSource death;
+    public AudioSource sDamage;
     void Start()
     {
         gameover.SetActive(false);
@@ -60,11 +61,17 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
+    public int getCurrentLife()
+    {
+        return life;
+    }
+
     public void getNaturalDamage(int damage)
     {
         life -= damage;
         lifebar.ChangeCurrentLife(life);
         animator.Play(HARRY_DAMAGE);
+        sDamage.Play();
         GetComponent<HarryMovement>().canMove = false;
         if (life <= 0)
         {

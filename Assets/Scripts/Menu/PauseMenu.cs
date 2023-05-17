@@ -53,8 +53,13 @@ public class PauseMenu : MonoBehaviour
         if (player)
         {
             Time.timeScale = 1f;
-            pauseButton.SetActive(true);
-            pauseMenu.SetActive(false);
+            if (pauseButton) {
+                pauseButton.SetActive(true);
+            }
+            if (pauseMenu) {
+                pauseMenu.SetActive(false);
+            }
+
             player.GetComponent<HarryMovement>().canMove = true;
             gameObject.GetComponent<GetNicknameField>().TextNickname();
         }
@@ -62,12 +67,16 @@ public class PauseMenu : MonoBehaviour
     
     public void Restart()
     {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (pauseButton) {
+                pauseButton.SetActive(true);
+        }
+        if (pauseMenu) {
+            pauseMenu.SetActive(false);
+        }
         if (player)
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            pauseButton.SetActive(true);
-            pauseMenu.SetActive(false);
             player.GetComponent<HarryMovement>().canMove = true;
         }
     }

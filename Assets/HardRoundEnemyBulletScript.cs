@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBulletScript : MonoBehaviour
+public class HardRoundEnemyBulletScript : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
     private float timer;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +17,9 @@ public class EnemyBulletScript : MonoBehaviour
 
         if (player != null)
         {
-            Vector3 direction = player.transform.position - transform.position;
+            Vector3 direction = new Vector3(player.transform.position.x + 8f, player.transform.position.y, 0) - transform.position;
             rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
-
-            float rot = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, rot);
-        }        
+        }
     }
 
     // Update is called once per frame
@@ -40,11 +37,8 @@ public class EnemyBulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (player != null)
-            {
-                other.GetComponent<PlayerLife>().getNaturalDamage(15);
-                Destroy(gameObject);
-            }
+            other.GetComponent<PlayerLife>().getNaturalDamage(50);
+            Destroy(gameObject);
         }
     }
 }

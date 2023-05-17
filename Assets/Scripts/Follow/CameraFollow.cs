@@ -17,6 +17,11 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     public float bottomLimit;
 
+    void Start()
+    {            
+        // AudioLevelScript.PlayAudioLvl();
+    }
+
     // Update is called once per frame
     void Update()
     {

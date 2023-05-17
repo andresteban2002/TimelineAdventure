@@ -7,7 +7,9 @@ using TMPro;
 
 public class ItemCollectorLv5 : MonoBehaviour
 {
-    private int combustibles;
+    public static int combustibles = 0;
+    public AudioSource oil;
+
     GameObject playerH;
     [SerializeField] private Text combustiblesText;
     [SerializeField] private Text totalCombustibleText;
@@ -21,6 +23,7 @@ public class ItemCollectorLv5 : MonoBehaviour
             totalCombustible = "5";
         }
         totalCombustibleText.text = totalCombustible;
+        combustiblesText.text = combustibles.ToString();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,7 +37,8 @@ public class ItemCollectorLv5 : MonoBehaviour
             {
                 playerH = GameObject.FindGameObjectWithTag("Player");
                 playerH.transform.position = new Vector3(844,5,1);
-            }        
+            }   
+            oil.Play();
         }
     }
 
@@ -42,7 +46,6 @@ public class ItemCollectorLv5 : MonoBehaviour
     {
         if (combustibles == int.Parse(totalCombustible))
         {
-            guard.isTrigger = true;
             combustiblesText.color = new Color(193, 153, 0);
             totalCombustibleText.color = new Color(193, 153, 0);
         }
