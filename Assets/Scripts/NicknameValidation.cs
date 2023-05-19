@@ -51,6 +51,16 @@ public class NicknameValidation : MonoBehaviour
         }else
         {
             gameObject.GetComponent<NicknameScript>().SaveData(data);
+            data = gameObject.GetComponent<NicknameScript>().LoadData();
+            for (int i = 0; i < 5; i++)
+            {
+                AcchievementsData acchievements = new AcchievementsData();
+                acchievements.state = false;
+                data.acchievements.Add(acchievements);
+                data.acchievements[i].level = i + 1;
+                data.acchievements[i].state = false;
+            }
+            gameObject.GetComponent<NicknameScript>().SaveData(data);
         }
     }
 }

@@ -34,17 +34,18 @@ public class LevelComplete : MonoBehaviour
         data = NicknameScript.instance.LoadData();
         if (levelNumber != 5)
         {
-            data.matches[NicknameScript.instance.actMatch].levelAct = levelNumber + 1;
+            data.matches[NicknameScript.instance.actMatch].levelAct = 6;
         }
         else
         {
-            data.matches[NicknameScript.instance.actMatch].levelAct = 5;
+            data.matches[NicknameScript.instance.actMatch].levelAct = 6;
         }
 
         data.acchievements[levelNumber - 1].state = true;
         NicknameScript.instance.SaveData(data);
         level.SetActive(false);
-        SceneManager.LoadScene(scenes[levelNumber]);
+        //SceneManager.LoadScene(scenes[levelNumber]);
+        SceneManager.LoadScene(scenes[5]);
     }
 }
     
