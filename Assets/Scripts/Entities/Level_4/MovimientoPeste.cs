@@ -13,7 +13,7 @@ public class MovimientoPeste : MonoBehaviour
     private const string PESTE_ATTACK = "Peste_Attack";
     private Animator _animator;
     private string currentStep;
-    private string direction = "right";
+    private string direction = "left";
     public AudioSource attack;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,7 @@ public class MovimientoPeste : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
         changeAnimationState(PESTE_WALK);
+        direction = "left";
     }
 
     // Update is called once per frame
@@ -49,12 +50,12 @@ public class MovimientoPeste : MonoBehaviour
         {
             if (direction == "right")
             {
-                _spriteRenderer.flipX = true;
+                _spriteRenderer.flipX = false;
                 direction = "left";
             }
             else if (direction == "left")
             {
-                _spriteRenderer.flipX = false;
+                _spriteRenderer.flipX = true;
                 direction = "right";
             }
         }

@@ -13,14 +13,12 @@ public class bacteria : MonoBehaviour
     
     //Animaciones
     Animator _animator;
-    Animator _animatorHarry;
-    private const string BACTERIA_ANIMATION = "bacteria_animation";
-    private const string HARRY_DAMAGE = "Harry_Damage";
+    private const string BACTERIA_ANIMATION = "Bacteria_animation";
     public AudioSource fireDamage;
     // Start is called before the first frame update
     void Start()
     {
-        _animator = GetComponent<Animator>();    
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -61,4 +59,3 @@ public class bacteria : MonoBehaviour
         }
     }
 }
-

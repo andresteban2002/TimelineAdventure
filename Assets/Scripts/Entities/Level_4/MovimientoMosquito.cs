@@ -68,7 +68,7 @@ public class MovimientoMosquito : MonoBehaviour
 
     private void startAttack()
     {
-        player.GetComponent<PlayerLife>().nextDamageTime = 1;
+        player.GetComponent<PlayerLife>().nextDamageTime = 0;
         player.GetComponent<PlayerLife>().getNaturalDamage(15);
         attack.Play();
     }

@@ -18,7 +18,7 @@ public class ItemCollector : MonoBehaviour
     {
         if (totalStones != null)
         {
-            totalStones = "20";
+            totalStones = "15";
         }
         totalStonesText.text = totalStones;
     }
