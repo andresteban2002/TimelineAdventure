@@ -863,6 +863,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1160173588}
     - target: {fileID: 3926725250808629216, guid: e89ab394bc596384383f5513c38c5ab6, type: 3}
+      propertyPath: BoomerangPrefab
+      value: 
+      objectReference: {fileID: 3346489243965595132, guid: c1f6a851f3f82744cbaa98ea939510f0, type: 3}
+    - target: {fileID: 3926725250808629216, guid: e89ab394bc596384383f5513c38c5ab6, type: 3}
       propertyPath: throwsBoomerang
       value: 
       objectReference: {fileID: 122697003}
